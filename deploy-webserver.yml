@@ -1,0 +1,9 @@
+- name: webserver for kmkonline additional
+  user: sysadmin
+  hosts: kmkonline-additional
+  sudo: yes
+  
+  roles:
+    - { role: nginx }
+    - { role: php5-base }
+    - { role: mysql }

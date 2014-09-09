@@ -1,0 +1,9 @@
+- name: install nginx 
+  apt_repository: repo='ppa:nginx/stable' state=present
+  tags: nginx
+
+- name: install webserver
+  apt: pkg={{item}} update_cache=yes state=latest
+  with_items:
+      - nginx-extras
+  tags: nginx

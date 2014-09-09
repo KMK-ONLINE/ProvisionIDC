@@ -1,0 +1,7 @@
+- name: Install Mysql Server
+  apt: pkg={{item}} update_cache=yes state=latest
+  with_items:
+      - mysql-server
+      - mysql-common
+  tags: mysql-server
+
