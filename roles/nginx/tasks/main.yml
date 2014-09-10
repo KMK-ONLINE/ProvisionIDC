@@ -5,5 +5,7 @@
 - name: install webserver
   apt: pkg={{item}} update_cache=yes state=latest
   with_items:
+      - nginx
       - nginx-extras
+      - nginx-full
   tags: nginx
